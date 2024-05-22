@@ -14,10 +14,12 @@ jobs:
     steps:
       # 拉取代码
       - name: Checkout
-      # 使用 actions/checkout 操作，用于拉取代码
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+      - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
+        with:
+          version: 8
 
       # 1、生成静态文件
       - name: Build
