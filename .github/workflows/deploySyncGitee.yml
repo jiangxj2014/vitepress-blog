@@ -78,7 +78,7 @@ jobs:
             {
               "msgtype": "text",
               "text": {
-                "content": "博客部署完成\n 地址：https://jiangxj2014.github.io",                 
+                "content": "🎉🎉🎉博客部署完成🎉🎉🎉\n预览地址：https://jiangxj2014.github.io",                 
               }
             }
 
@@ -92,7 +92,7 @@ jobs:
             {
               "msgtype": "text",
               "text": {
-                "content": "博客部署失败",                 
+                "content": "💣💣💣博客部署失败💣💣💣",                 
               }
             }
     
