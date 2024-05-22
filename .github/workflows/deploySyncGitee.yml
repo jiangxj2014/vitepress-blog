@@ -35,7 +35,7 @@ jobs:
           # 目标文件夹
           folder: ./docs/.vitepress/dist
           # 访问令牌
-          token: ${{ secrets.ACCESS_TOKEN }}
+          access_token: ${{ secrets.ACCESS_TOKEN }}
           # 部署仓库
           repository_name: jiangxj2014/jiangxj2014.github.io
         
