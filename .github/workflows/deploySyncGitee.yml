@@ -1,0 +1,38 @@
+name: Deploy GitHub Pages and sync Gitee
+
+# 触发条件：在 push 到 master 分支后
+on:
+  push:
+    branches:
+      - master
+
+# 任务
+jobs:
+  build-and-deploy:
+    # 服务器环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout
+      # 使用 actions/checkout 操作，用于拉取代码
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      # 1、生成静态文件
+      - name: Build
+        run: pnpm && pnpm docs:build
+
+      # 2、部署到 GitHub Pages
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        # 部署到 GitHub Pages 的参数
+        with:
+          # 分支
+          BRANCH: gh-pages
+          # 目标文件夹
+          FOLDER: ./docs/.vitepress/dist
+          # 访问令牌
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # 部署仓库
+          REPOSITORY_NAME: jiangxj2014/jiangxj2014.github.io

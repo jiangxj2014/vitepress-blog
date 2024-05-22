@@ -54,7 +54,7 @@ export default defineConfig({
     ],
     editLink: {
       pattern: 'https://github.com/jiangxj2014/vitepress-blog/edit/master/docs/:path',
-      text: '在GitHub中编辑此页'
+      text: '在 GitHub 中编辑此页'
     },    
   }
 });
