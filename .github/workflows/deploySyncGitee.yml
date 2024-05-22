@@ -27,7 +27,7 @@ jobs:
 
       # 2、部署到 GitHub Pages
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v4
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         # 部署到 GitHub Pages 的参数
         with:
           # 分支
