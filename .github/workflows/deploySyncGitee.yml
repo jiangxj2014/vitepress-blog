@@ -31,13 +31,13 @@ jobs:
         # 部署到 GitHub Pages 的参数
         with:
           # 分支
-          BRANCH: gh-pages
+          branch: gh-pages
           # 目标文件夹
-          FOLDER: ./docs/.vitepress/dist
+          folder: ./docs/.vitepress/dist
           # 访问令牌
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           # 部署仓库
-          REPOSITORY_NAME: jiangxj2014/jiangxj2014.github.io
+          repository_name: jiangxj2014/jiangxj2014.github.io
         
       # 3、同步到 Gitee Pages
       - name: Sync to Gitee
@@ -50,7 +50,7 @@ jobs:
           source-repo: git@github.com:jiangxj2014/jiangxj2014.github.io.git
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@gitee.com:jiangxj1314/jiangxj1314.git
-          
+
       # 由于 Gitee Pages 暂停服务，所以注释掉
       # # 4、自动部署 Gitee Pages
       # - name: Build Gitee Pages
