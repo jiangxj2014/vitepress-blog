@@ -30,10 +30,11 @@ export default defineConfig({
   head: [
     [
       'link',
-      { rel: 'icon', href: '/vitepress-blog/favicon.ico' },
+      // 部署到根目录： '/favicon.ico'   子目录示例：'/vitepress-blog/favicon.ico'
+      { rel: 'icon', href: '/favicon.ico' },
     ],
   ],
-  base: '/vitepress-blog/',
+  base: '/', // 部署到根目录： '/'   子目录示例：'/vitepress-blog/'
   lastUpdated: true,
 
   themeConfig: {
