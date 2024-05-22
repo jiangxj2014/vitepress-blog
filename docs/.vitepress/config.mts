@@ -6,20 +6,21 @@ const navMenus = [
   {
     text: "开发学习",
     items: [
-      { text: "Vue3", link: "/study/vue3/index" },
-      { text: "MarkDown", link: "/study/markdown/index" },
+      { text: "Vue3", link: "/study/vue3/" },
+      { text: "MarkDown", link: "/study/markdown/" },
     ],
   },
-  { text: "工具", link: "/tools/index" },
+  { text: "工具", link: "/tools/" },
 ];
 // 侧边导航菜单配置
 const sidebarMenus = {
   "/study/": [
-    { text: "Vue3", link: "/study/vue3/index" },
-    { text: "MarkDown", link: "/study/markdown/index" },
+    { text: "Vue3", link: "/study/vue3/" },
+    { text: "MarkDown", link: "/study/markdown/" },
   ],
   "/tools/": [
-    { text: "工具收藏", link: "/tools/index" }
+    { text: "工具收藏", link: "/tools/" },
+    { text: "Git 配置多个 SSH-Key", link: "/tools/multiple-ssh-keys" }
   ],
 }
 

@@ -27,17 +27,18 @@ jobs:
 
       # 2、部署到 GitHub Pages
       - name: Deploy
+        # v3与v4版本，配置参数不同，此处使用v3版本
         uses: JamesIves/github-pages-deploy-action@releases/v3
         # 部署到 GitHub Pages 的参数
         with:
           # 分支
-          branch: gh-pages
+          BRANCH: gh-pages
           # 目标文件夹
-          folder: ./docs/.vitepress/dist
+          FOLDER: ./docs/.vitepress/dist
           # 访问令牌
-          access_token: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           # 部署仓库
-          repository_name: jiangxj2014/jiangxj2014.github.io
+          REPOSITORY_NAME: jiangxj2014/jiangxj2014.github.io
         
       # 3、同步到 Gitee
       - name: Sync to Gitee
