@@ -66,3 +66,33 @@ jobs:
       #     gitee-repo: jiangxj1314/jiangxj1314
       #     # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
       #     branch: gh-pages
+
+      # 5、发送钉钉通知
+      - name: 成功通知
+        if: ${{ success() }}
+        uses: zcong1993/actions-ding@master
+        with:
+          dingToken: ${{ secrets.DING_TOKEN }}
+          secret: ${{ secrets.DING_SECRET }} # if secret set, action will call API with sign
+          body: |
+            {
+              "msgtype": "text",
+              "text": {
+                "content": "博客部署完成\n 地址：https://jiangxj2014.github.io",                 
+              }
+            }
+
+      - name: 失败通知
+        if: ${{ failure() }}
+        uses: zcong1993/actions-ding@master
+        with:
+          dingToken: ${{ secrets.DING_TOKEN }}
+          secret: ${{ secrets.DING_SECRET }} # if secret set, action will call API with sign
+          body: |
+            {
+              "msgtype": "text",
+              "text": {
+                "content": "博客部署失败",                 
+              }
+            }
+    
