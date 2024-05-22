@@ -39,18 +39,18 @@ jobs:
           # 部署仓库
           repository_name: jiangxj2014/jiangxj2014.github.io
         
-      # # 3、同步到 Gitee Pages
-      # - name: Sync to Gitee
-      #   uses: wearerequired/git-mirror-action@v1.2.0
-      #   env:
-      #     # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
-      #     SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-      #   with:
-      #     # 注意替换为你的 GitHub 源仓库地址
-      #     source-repo: https://github.com/jiangxj2014/jiangxj2014.github.io.git
-      #     # source-repo: git@github.com:jiangxj2014/jiangxj2014.github.io.git
-      #     # 注意替换为你的 Gitee 目标仓库地址
-      #     destination-repo: git@gitee.com:jiangxj1314/jiangxj1314.git
+      # 3、同步到 Gitee
+      - name: Sync to Gitee
+        uses: wearerequired/git-mirror-action@v1.2.0
+        env:
+          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+        with:
+          # 注意替换为你的 GitHub 源仓库地址
+          source-repo: https://github.com/jiangxj2014/jiangxj2014.github.io.git
+          # source-repo: git@github.com:jiangxj2014/jiangxj2014.github.io.git
+          # 注意替换为你的 Gitee 目标仓库地址
+          destination-repo: git@gitee.com:jiangxj1314/jiangxj1314.git
 
       # 由于 Gitee Pages 暂停服务，所以注释掉
       # # 4、自动部署 Gitee Pages
