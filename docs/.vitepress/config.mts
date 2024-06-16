@@ -5,10 +5,11 @@ const navMenus = [
   { text: "首页", link: "/" },
   {
     text: "开发学习",
-    items: [
-      { text: "Vue3", link: "/study/vue3/" },
-      { text: "MarkDown", link: "/study/markdown/" },
-    ],
+    link: "/study/vue3/",
+    // items: [
+    //   { text: "Vue3", link: "/study/vue3/" },
+    //   { text: "MarkDown", link: "/study/markdown/" },
+    // ],
   },
   { text: "工具", link: "/tools/" },
 ];

@@ -15,7 +15,7 @@ uTools 是一个极简、插件化、跨平台的现代桌面软件。通过自�
 官网地址： [uTools](https://www.u.tools/)  
 在线工具：
 
-- JSON 格式化转换：[JOSN](https://www.json.cn/#)
+- JSON 格式化转换：[JSON](https://www.json.cn/#)
 - 图片压缩工具：[TinyPNG](https://tinypng.com/)
 
 ## :shamrock:办公软件
